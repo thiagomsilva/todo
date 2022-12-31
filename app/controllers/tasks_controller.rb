@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  include Exportable
+  
   before_action :set_task, only: %i[ edit update destroy ]
 
   def index

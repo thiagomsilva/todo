@@ -1,15 +1,16 @@
-<div class="row mb-2">
-  <div class="col-8">
-    <h1 class="display-4">Tarefas</h1>
+<div class='row mb-2'>
+  <div class='col-8'>
+    <h1 class='display-4'>Tarefas</h1>
   </div>
 
-  <div class="col-4 mt-4 text-right">
+  <div class='col-4 mt-4 text-right'>
     <%= link_to '+ Tarefa', new_task_path, class: 'btn btn-success' %>
+    <%= link_to 'Exportar CSV', export_csv_tasks_path, class: 'btn btn-info' %>
   </div>
 </div>
 
 <% if @tasks.any? %>
-  <table class="table table-borderless">
+  <table class='table table-borderless'>
     <thead>
       <tr>
         <th>Descrição</th>
@@ -21,10 +22,10 @@
     <tbody>
       <% @tasks.each do |task| %>
         <%= render 'table_row', task: task %>
-        
-          <% task.sub_tasks.order(:due_date).each do |sub_task| %>
-            <%= render 'table_row', task: sub_task %>
-          <% end %>
+
+        <% task.sub_tasks.order(:due_date).each do |sub_task| %>
+          <%= render 'table_row', task: sub_task %>
+        <% end %>
       <% end %>
     </tbody>
   </table>
