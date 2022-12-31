@@ -3,7 +3,7 @@
     <h1 class='display-4'>Tarefas</h1>
   </div>
 
-  <div class='col-4 mt-4 text-right'>
+  <div class='col-4 mt-4 text-end'>
     <%= link_to '+ Tarefa', new_task_path, class: 'btn btn-success' %>
     <%= link_to 'Exportar CSV', export_csv_tasks_path, class: 'btn btn-info' %>
   </div>
@@ -15,7 +15,7 @@
       <tr>
         <th>Descrição</th>
         <th>Prazo</th>
-        <th></th>
+        <th class='text-center pe-0'>Ações</th>
       </tr>
     </thead>
 

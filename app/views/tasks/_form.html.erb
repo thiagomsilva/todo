@@ -1,17 +1,17 @@
 <%= form_with(model: task) do |form| %>
   <%= form.hidden_field :parent_id, value: task.parent_id || params[:parent_id] %>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= form.label :description %>
-    <%= form.text_field :description, class: 'form-control' %>
+    <%= form.text_field :description, class: 'form-control', placeholder: "Entre com a descrição aqui" %>
   </div>
 
-  <div class="form-group">
+  <div class="mb-3">
     <%= form.label :due_date %>
     <%= form.date_select :due_date %>
   </div>
 
-  <div class="form-group form-check">
+  <div class="mb-3 form-check">
     <%= form.check_box :done, class: "form-check-input" %>
     <%= form.label :done, class: "form-check-label" %>
   </div>
