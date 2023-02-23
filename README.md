@@ -2,12 +2,16 @@
 
 Aplicação To Do List utilizando bootstrap
 
-## Tecnologias
+## Gems utilizadas
 
 - Ruby 3.1.2
 - Rails 6.1.7
 - Bootstrap 5.2.3
 - PostgreSQL
+- RSpec
+- Factory bot
+- Faker
+- Shoulda matchers
 
 ## Inciando a aplicação
 
@@ -21,6 +25,12 @@ bundle install
 
 ```
 rails db:create db:migrate
+```
+
+- Executar os testes:
+
+```
+rspec
 ```
 
 - Inicar o servidor local:
