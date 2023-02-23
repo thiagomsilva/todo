@@ -42,3 +42,17 @@ rails s
 - Acesse no navegador:
 
 http://localhost:3000
+
+- Use o seguinte usuário e senha:
+
+username:
+
+```
+admin
+```
+
+password:
+
+```
+teste123
+```

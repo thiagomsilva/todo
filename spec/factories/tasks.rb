@@ -1,8 +1,9 @@
 FactoryBot.define do
     factory :task do
         description { Faker::Lorem.sentence }
+        due_date { Faker::Date.between(from: Date.today, to: 1.month.from_now) }
         done { Faker::Boolean.boolean }
-  
+
         trait :with_parent do
             parent { create(:task) }
         end
