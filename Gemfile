@@ -29,6 +29,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'rails-i18n'
+gem 'net-smtp'
+gem 'net-pop'
+gem 'net-imap'
 
 
 group :development, :test do
