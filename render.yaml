@@ -1,0 +1,18 @@
+# Exported from Render on 2024-06-18T17:26:23Z
+services:
+  - type: web
+    name: todoprod
+    runtime: ruby
+    repo: https://github.com/thiagomsilva/ToDo
+    plan: free
+    envVars:
+      - key: WEB_CONCURRENCY
+        sync: false
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+    region: ohio
+    buildCommand: bundle install && bundle exec rake db:migrate
+    startCommand: rails server
+version: "1"
